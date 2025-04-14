@@ -1,7 +1,8 @@
 package Projeto_Escola.Projeto_Escola.entity.repository;
 
+import Projeto_Escola.Projeto_Escola.entity.Coordenador;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CoordenadorRepository extends JpaRepository<CoordenadorRepository,Long> {
+public interface CoordenadorRepository extends JpaRepository<Coordenador,Long> {
 
 }

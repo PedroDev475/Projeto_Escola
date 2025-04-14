@@ -17,6 +17,10 @@ import java.util.List;
 @NoArgsConstructor
 public class Coordenador extends Usuario{
 
+    public Coordenador(Long id, String nome, int idade, List<Professor> equipeProfessores) {
+        super(id, nome, idade);
+        this.equipeProfessores = equipeProfessores;
+    }
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinTable(
@@ -24,5 +28,5 @@ public class Coordenador extends Usuario{
             joinColumns = @JoinColumn(name = "coordernador_id"),
             inverseJoinColumns = @JoinColumn(name = "professsor_id")
     )
-   private List<Professor>equipeProfessores;
+   private List<Professor> equipeProfessores;
 }

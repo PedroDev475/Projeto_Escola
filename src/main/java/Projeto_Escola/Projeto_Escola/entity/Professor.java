@@ -16,6 +16,10 @@ import java.util.List;
 @NoArgsConstructor
 @Table(name ="professores")
 public class Professor extends Usuario {
+    public Professor(Long id, String nome, int idade, String turma) {
+        super(id, nome, idade);
+        this.turma = turma;
+    }
 
     @Column(nullable = false)
     private String turma;
